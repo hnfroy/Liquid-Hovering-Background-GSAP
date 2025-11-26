@@ -1,73 +1,43 @@
-# React + TypeScript + Vite
+# 🚀 Liquid 3D Page Experience (React + Three.js + GSAP)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project ini adalah eksperimen UI/UX modern berbasis **React + Vite**, dengan perpaduan efek:
+- Liquid interactive background (Three.js Shader)
+- Dynamic hover distortion
+- 3D immersive page transitions (GSAP)
+- Smooth navigation motion
 
-Currently, two official plugins are available:
+Dibuat untuk menghasilkan pengalaman visual yang hidup, cinematic, dan interaktif seperti website-website creative studio kelas atas.
+---
+## 🧩 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🎨 Liquid Background (Three.js + GLSL Shader)
+- Radial liquid effect dari tengah layar
+- Distortion mengikuti posisi mouse
+- Efek organic + noised shader
+- Fullscreen reactive WebGL canvas
 
-## React Compiler
+### 🔥 3D Page Transitions
+- Halaman masuk dengan efek **zoom from camera**
+- Depth motion via `rotateX`, perspective, blur
+- Cinematic reveal ala "teleport in"
+- Leave transition yang smooth & dramatik
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### ✨ Interactive Navigation
+- Setiap klik nav bisa dihubungkan dengan animasi logo/text flying (opsional)
+- Transition terintegrasi otomatis via React Router
+---
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+| Tech | Function |
+|------|----------|
+| **React + Vite** | Base framework |
+| **TypeScript** | Strict, error-free environment |
+| **Three.js** | Liquid background shader & rendering |
+| **GLSL Shader** | Custom noise-based liquid effect |
+| **GSAP** | Motion engine for 3D animations |
+| **React Router DOM** | Page navigation & transitions |
+---
+## 📦 Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+npm install
